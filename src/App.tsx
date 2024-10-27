@@ -14,7 +14,7 @@ export const App: FC = () => {
   const [checkError, setCheckError] = useState<boolean>(false)
   const { steps, isLoading, isError } = useSelector((state: RootState) => state.reducer)
   const dispatch: AppDispatch = useDispatch()
-  const playerRef = useRef<ReactPlayer>()
+  const playerRef = useRef<ReactPlayer>(null)
 
   useEffect(() => {
     dispatch(getStepsFetch())
